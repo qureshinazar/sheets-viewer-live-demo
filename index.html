@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Sheets Data Table</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+</head>
+<body>
+
+  <h2>GoogleSheets To HTML Table</h2>
+
+  <!-- Step 1: Create a form for user input -->
+  <form id="configForm">
+    <label for="sheetId">Enter Your Google Sheet ID:</label>
+    <input type="text" id="sheetId" name="sheetId" required>
+
+    <label for="sheetName">Enter Your Google Sheet Name:</label>
+    <input type="text" id="sheetName" name="sheetName" required>
+
+    <label for="apiKey">Enter Your Google Sheets API key:</label>
+    <input type="text" id="apiKey" name="apiKey" required>
+
+    <!-- Step 4: Create a button to submit the form -->
+    <button type="button" onclick="updateVariables()">Submit</button>
+  </form>
+
+  <table id="dataTable"></table>
+
+  <!-- Step 2: Store variables in a script tag -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
